@@ -34,12 +34,12 @@ m4.Print();
 int[] result4 = m4.Spiral();
 Console.WriteLine($"spiral4: {String.Join(" ", result4)}");
 
-class Matrix
+class Matrix //класс матрицы
 {
     int[,] matrix;
     int rows, columns;
 
-    public Matrix(int rows, int columns)
+    public Matrix(int rows, int columns) //генерируем по количеству строк и столбцов
     {
         this.rows = rows;
         this.columns = columns;
@@ -47,7 +47,7 @@ class Matrix
         Generate();
     }
 
-    public Matrix(int[,] matrix)
+    public Matrix(int[,] matrix) //копируем из исходной матрицы
     {
         rows = matrix.GetLength(0);
         columns = matrix.GetLength(1);
@@ -82,7 +82,7 @@ class Matrix
         }
     }
 
-    public int[] Spiral()
+    public int[] Spiral() //читаем спиралью
     {
         int resultCount = rows * columns;
         int[] result = new int[resultCount];
